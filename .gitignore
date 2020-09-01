@@ -1,3 +1,5 @@
+.vscode
+
 # Logs
 logs
 *.log
@@ -53,6 +55,7 @@ typings/
 
 # dotenv environment variable files
 .env*
+!.env.example
 
 # gatsby files
 .cache/
