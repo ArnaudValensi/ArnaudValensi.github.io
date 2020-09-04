@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"Cuy+":function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return o}));n("q1tI");var a=n("Bl7J"),l=n("vrFN"),c=n("qKvR");function o(){return Object(c.b)(a.a,null,Object(c.b)(l.a,{title:"Contact Me",description:"Arnaud Valensi's contact details"}),Object(c.b)("h1",null,"I'd love to talk! Email me at the address below"),Object(c.b)("p",null,Object(c.b)("a",{href:"mailto:me@example.com"},"me@example.com")))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-5b402c51b20cf2810cdd.js.map
