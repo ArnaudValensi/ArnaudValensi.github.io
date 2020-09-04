@@ -9,8 +9,6 @@ export default function Blog({ data }) {
   return (
     <Layout>
       <SEO title="Blog" description="All the blog posts from Arnaud Valensi" />
-      <h1>All my posts</h1>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link
@@ -45,7 +43,6 @@ export default function Blog({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
       edges {
         node {
           id

@@ -33,7 +33,7 @@ export default function Layout({ children }) {
         `}
       >
         <Link to="/">
-          <h3
+          <h2
             css={css`
               margin-bottom: ${rhythm(2)};
               display: inline-block;
@@ -41,7 +41,7 @@ export default function Layout({ children }) {
             `}
           >
             {data.site.siteMetadata.title}
-          </h3>
+          </h2>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">About Me</ListLink>
