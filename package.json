@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "import-notion-posts": "dotenv -- python3 ./bin/get-blog-posts.py"
+    "import-notion-posts": "dotenv -- python3 ./bin/get-blog-posts.py",
+    "deploy": "yarn build && gh-pages -d public"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
