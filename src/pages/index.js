@@ -6,10 +6,7 @@ export default function Home() {
   return (
     <Layout>
       <SEO title="About Me" description="About Arnaud Valensi" />
-      <p>
-        What do I like to do? Lots of course but definitely enjoy building
-        websites.
-      </p>
+      <p>What do I like to do?</p>
     </Layout>
   )
 }
