@@ -11,7 +11,7 @@ const customTheme = {
   googleFonts: [
     {
       name: "Patua One",
-      styles: ["400"],
+      styles: ["400", "900"],
     },
     {
       name: "Fira Sans",
@@ -22,7 +22,7 @@ const customTheme = {
   bodyFontFamily: ["Fira Sans", "sans-serif"],
   headerColor: "hsla(0,0%,0%,1)",
   bodyColor: "hsla(0,0%,0%,0.8)",
-  headerWeight: 400,
+  headerWeight: 700,
   bodyWeight: 400,
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
