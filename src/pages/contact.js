@@ -13,15 +13,31 @@ export default function Contact() {
         `}
       >
         <p>
-          <a href="mailto:me@example.com">Email</a>
+          <a
+            href="mailto:arnaud.valensi@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Email
+          </a>
         </p>
         <p>
-          <a href="https://www.linkedin.com/in/arnaud-valensi-04080084/">
+          <a
+            href="https://www.linkedin.com/in/arnaud-valensi-04080084/"
+            target="_blank"
+            rel="noreferrer"
+          >
             LinkedIn
           </a>
         </p>
         <p>
-          <a href="https://twitter.com/ArnaudValensi">Twitter</a>
+          <a
+            href="https://twitter.com/ArnaudValensi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
         </p>
       </div>
     </Layout>
