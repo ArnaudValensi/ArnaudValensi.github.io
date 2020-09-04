@@ -24,7 +24,7 @@ dest_path = os.path.normpath(os.path.join(
     os.path.dirname(__file__), '..', 'content', 'blog'))
 
 markdown_pages = {}
-regexMeta = re.compile('^== *(.+) *$')
+regex_meta = re.compile('^== *(.+) *$')
 ignore_root = True
 
 
@@ -88,7 +88,7 @@ def to_markdown(page_id, ignore):
         elif content.type == 'divider':
             text = text + f'---\n'
         elif content.type == 'text':
-            matchMeta = regexMeta.match(content.title)
+            matchMeta = regex_meta.match(content.title)
             if matchMeta:
                 metas.append(matchMeta.group(1))
             else:
@@ -110,22 +110,23 @@ def to_markdown(page_id, ignore):
     return slug
 
 
-print(f'-> Cleaning the "{dest_path}" folder')
-try:
-    shutil.rmtree(dest_path)
-except:
-    pass
-os.mkdir(dest_path)
+if __name__ == "__main__":
+    print(f'-> Cleaning the "{dest_path}" folder')
+    try:
+        shutil.rmtree(dest_path)
+    except:
+        pass
+    os.mkdir(dest_path)
 
-to_markdown(root_page_id, ignore=ignore_root)
+    to_markdown(root_page_id, ignore=ignore_root)
 
-for slug, markdown in markdown_pages.items():
-    file_name = slug + '.md'
-    file_path = os.path.join(dest_path, file_name)
+    for slug, markdown in markdown_pages.items():
+        file_name = slug + '.md'
+        file_path = os.path.join(dest_path, file_name)
 
-    file = open(file_path, 'w')
-    file.write(markdown)
+        file = open(file_path, 'w')
+        file.write(markdown)
 
-    print('-> Imported "' + file_name + '"')
+        print('-> Imported "' + file_name + '"')
 
-print('Done: imported ' + str(len(markdown_pages)) + ' pages.')
+    print('Done: imported ' + str(len(markdown_pages)) + ' pages.')

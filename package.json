@@ -6,13 +6,13 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "yarn build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "import-notion-posts": "dotenv -- python3 ./bin/get-blog-posts.py",
-    "deploy": "yarn build && gh-pages -d public"
+    "import-notion-posts": "dotenv -- python3 ./bin/get-blog-posts.py"
   },
   "dependencies": {
     "@emotion/core": "10.0.35",
