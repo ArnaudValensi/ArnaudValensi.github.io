@@ -3,10 +3,25 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
+const MenuLink = props => (
+  <Link
+    to={props.to}
+    css={css`
+      color: "blue";
+      & + & {
+        margin-top: ${rhythm(1)};
+      }
+
+      @media (min-width: 576px) {
+        & + & {
+          margin-top: 0;
+          margin-left: ${rhythm(1)};
+        }
+      }
+    `}
+  >
+    {props.children}
+  </Link>
 )
 
 export default function Layout({ children }) {
@@ -21,34 +36,69 @@ export default function Layout({ children }) {
   `)
 
   return (
-    <div
-      css={css`
-        padding: ${rhythm(2)} ${rhythm(1)};
-      `}
-    >
+    <div>
       <div
         css={css`
+          padding: ${rhythm(2)} ${rhythm(1)};
           margin: 0 auto;
           max-width: 680px;
         `}
       >
-        <Link to="/">
-          <h2
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: ${rhythm(2)};
+
+            @media (min-width: 576px) {
+              flex-direction: row;
+            }
+          `}
+        >
+          <Link
+            to="/"
             css={css`
+              width: 100%;
               margin-bottom: ${rhythm(2)};
-              display: inline-block;
-              font-style: normal;
+              text-align: center;
+
+              @media (min-width: 576px) {
+                width: unset;
+                margin-bottom: 0;
+                text-align: unset;
+              }
             `}
           >
-            {data.site.siteMetadata.title}
-          </h2>
-        </Link>
-        <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/">About Me</ListLink>
-          <ListLink to="/blog/">Blog</ListLink>
-          <ListLink to="/contact/">Contact Me</ListLink>
-        </ul>
-        {children}
+            <h2
+              css={css`
+                display: inline-block;
+                font-style: normal;
+                margin-bottom: 0;
+              `}
+            >
+              {data.site.siteMetadata.title}
+            </h2>
+          </Link>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin-left: 0;
+              align-items: center;
+
+              @media (min-width: 576px) {
+                margin-left: auto;
+                flex-direction: row;
+              }
+            `}
+          >
+            <MenuLink to="/">About Me</MenuLink>
+            <MenuLink to="/blog">Blog</MenuLink>
+            <MenuLink to="/contact">Contact Me</MenuLink>
+          </div>
+        </div>
+        <div>{children}</div>
       </div>
     </div>
   )
