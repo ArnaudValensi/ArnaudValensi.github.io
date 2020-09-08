@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 const MenuLink = props => (
   <Link
@@ -49,6 +50,7 @@ export default function Layout({ children }) {
         padding: ${rhythm(2)} ${rhythm(1)};
         margin: 0 auto;
         max-width: 680px;
+        transition: "color 2s ease-out, background 2s ease-out, background-color 2s ease-out";
       `}
     >
       <div
@@ -106,6 +108,18 @@ export default function Layout({ children }) {
           <MenuLink to="/contact/">Contact Me</MenuLink>
         </div>
       </div>
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+            <input
+              type="checkbox"
+              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+              checked={theme === "dark"}
+            />{" "}
+            Dark mode
+          </label>
+        )}
+      </ThemeToggler>
       <div>{children}</div>
     </div>
   )

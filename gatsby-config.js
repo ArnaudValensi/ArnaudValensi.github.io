@@ -7,6 +7,7 @@ module.exports = {
     author: `Arnaud Valensi`,
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,

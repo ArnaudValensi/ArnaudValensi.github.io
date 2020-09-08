@@ -1,14 +1,26 @@
 /* Color based on dracula theme https://draculatheme.com/contribute/ */
 
 body {
+  --bg: #f8f8f2;
+  --websiteTitle: #6272a4;
+  --textNormal: #282a36;
+  --textTitle: #6272a4;
+  --menuLink: #6272a4;
+  --textLink: #6272a4;
+
+  background-color: var(--bg);
+  transition: "color 2s ease-out, background 2s ease-out, background-color 2s ease-out";
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
   --bg: #282a36;
   --websiteTitle: #50fa7b;
   --textNormal: #f8f8f2;
   --textTitle: #ff79c6;
   --menuLink: #bd93f9;
   --textLink: #8be9fd;
-
-  background-color: var(--bg);
 }
 
 h1,
