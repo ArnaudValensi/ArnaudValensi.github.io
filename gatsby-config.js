@@ -44,6 +44,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Arnaud Valensi`,
+        short_name: `Arnaud Valensi`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffa7c4`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`,
+        theme_color_in_head: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
