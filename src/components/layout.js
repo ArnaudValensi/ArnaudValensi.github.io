@@ -7,7 +7,13 @@ const MenuLink = props => (
   <Link
     to={props.to}
     css={css`
-      color: "blue";
+      text-decoration: none;
+      color: var(--menuLink);
+      transition: opacity 0.2s ease-in-out;
+      opacity: 60%;
+      &:hover {
+        opacity: 100%;
+      }
       & + & {
         margin-top: ${rhythm(1)};
       }
@@ -19,6 +25,7 @@ const MenuLink = props => (
         }
       }
     `}
+    activeStyle={{ opacity: 1 }}
   >
     {props.children}
   </Link>
@@ -36,70 +43,70 @@ export default function Layout({ children }) {
   `)
 
   return (
-    <div>
+    <div
+      css={css`
+        color: var(--textNormal);
+        padding: ${rhythm(2)} ${rhythm(1)};
+        margin: 0 auto;
+        max-width: 680px;
+      `}
+    >
       <div
         css={css`
-          padding: ${rhythm(2)} ${rhythm(1)};
-          margin: 0 auto;
-          max-width: 680px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: ${rhythm(2)};
+
+          @media (min-width: 576px) {
+            flex-direction: row;
+          }
         `}
       >
+        <Link
+          to="/"
+          css={css`
+            width: 100%;
+            margin-bottom: ${rhythm(2)};
+            text-align: center;
+
+            @media (min-width: 576px) {
+              width: unset;
+              margin-bottom: 0;
+              text-align: unset;
+            }
+          `}
+        >
+          <h2
+            css={css`
+              display: inline-block;
+              font-style: normal;
+              margin-bottom: 0;
+              color: var(--websiteTitle);
+            `}
+          >
+            {data.site.siteMetadata.title}
+          </h2>
+        </Link>
         <div
           css={css`
             display: flex;
             flex-direction: column;
+            margin-left: 0;
             align-items: center;
-            margin-bottom: ${rhythm(2)};
 
             @media (min-width: 576px) {
+              margin-left: auto;
               flex-direction: row;
             }
           `}
         >
-          <Link
-            to="/"
-            css={css`
-              width: 100%;
-              margin-bottom: ${rhythm(2)};
-              text-align: center;
-
-              @media (min-width: 576px) {
-                width: unset;
-                margin-bottom: 0;
-                text-align: unset;
-              }
-            `}
-          >
-            <h2
-              css={css`
-                display: inline-block;
-                font-style: normal;
-                margin-bottom: 0;
-              `}
-            >
-              {data.site.siteMetadata.title}
-            </h2>
-          </Link>
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-              margin-left: 0;
-              align-items: center;
-
-              @media (min-width: 576px) {
-                margin-left: auto;
-                flex-direction: row;
-              }
-            `}
-          >
-            <MenuLink to="/">About Me</MenuLink>
-            <MenuLink to="/blog">Blog</MenuLink>
-            <MenuLink to="/contact">Contact Me</MenuLink>
-          </div>
+          <MenuLink to="/">About Me</MenuLink>
+          <MenuLink to="/blog/">Blog</MenuLink>
+          <MenuLink to="/contact/">Contact Me</MenuLink>
         </div>
-        <div>{children}</div>
       </div>
+      <div>{children}</div>
     </div>
   )
 }

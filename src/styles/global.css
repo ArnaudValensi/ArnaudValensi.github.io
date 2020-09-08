@@ -1,3 +1,25 @@
+/* Color based on dracula theme https://draculatheme.com/contribute/ */
+
 body {
-  background: rgb(252 252 247);
+  --bg: #282a36;
+  --websiteTitle: #50fa7b;
+  --textNormal: #f8f8f2;
+  --textTitle: #ff79c6;
+  --menuLink: #bd93f9;
+  --textLink: #8be9fd;
+
+  background-color: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--textTitle);
+}
+
+a {
+  color: var(--textLink);
 }
