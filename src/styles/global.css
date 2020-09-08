@@ -9,7 +9,7 @@ body {
   --textLink: #6272a4;
 
   background-color: var(--bg);
-  transition: "color 2s ease-out, background 2s ease-out, background-color 2s ease-out";
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 }
 
 body.dark {
