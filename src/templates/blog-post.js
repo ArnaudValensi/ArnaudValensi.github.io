@@ -5,7 +5,9 @@ import SEO from "../components/SEO"
 import { rhythm } from "../utils/typography"
 import { css } from "@emotion/core"
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ data, pageContext }) {
+  const { previousPost, nextPost } = pageContext
+
   const post = data.markdownRemark
   return (
     <Layout>
@@ -32,6 +34,33 @@ export default function BlogPost({ data }) {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
       </main>
+      <nav
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: ${rhythm(3)};
+        `}
+      >
+        <div>
+          {previousPost && (
+            <Link
+              to={`/blog${previousPost.slug}`}
+              rel="prev"
+              style={{ marginRight: 20 }}
+            >
+              ← {previousPost.title}
+            </Link>
+          )}
+        </div>
+        <div>
+          {nextPost && (
+            <Link to={`/blog${nextPost.slug}`} rel="next">
+              {nextPost.title} →
+            </Link>
+          )}
+        </div>
+      </nav>
     </Layout>
   )
 }

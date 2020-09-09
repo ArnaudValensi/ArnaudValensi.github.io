@@ -23,13 +23,39 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              title
+            }
           }
         }
       }
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach(({ node }, index) => {
+    let previousPost = null
+    if (index < posts.length - 1) {
+      const postIndex = index + 1
+      const previousNode = posts[postIndex].node
+
+      previousPost = {
+        title: previousNode.frontmatter.title,
+        slug: previousNode.fields.slug,
+      }
+    }
+
+    let nextPost = null
+    if (index > 0) {
+      const postIndex = index - 1
+      const nextNode = posts[postIndex].node
+      nextPost = {
+        title: nextNode.frontmatter.title,
+        slug: nextNode.fields.slug,
+      }
+    }
+
     createPage({
       path: `/blog${node.fields.slug}`,
       component: path.resolve(`./src/templates/blog-post.js`),
@@ -37,6 +63,8 @@ exports.createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+        previousPost,
+        nextPost,
       },
     })
   })
