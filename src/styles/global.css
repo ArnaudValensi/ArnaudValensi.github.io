@@ -29,7 +29,3 @@ h5,
 h6 {
   color: var(--textTitle);
 }
-
-a {
-  color: var(--textLink);
-}

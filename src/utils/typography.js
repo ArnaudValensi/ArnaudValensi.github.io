@@ -27,7 +27,11 @@ const customTheme = {
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     a: {
-      color: "#9f392b",
+      color: "var(--textLink)",
+      textDecoration: "none",
+    },
+    "a:hover": {
+      textDecoration: "underline",
     },
     blockquote: {
       ...scale(1 / 5),
