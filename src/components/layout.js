@@ -4,6 +4,18 @@ import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import DarkModeToggler from "./DarkModeToggler"
 
+const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
+  if (isPartiallyCurrent) {
+    if (href === "/" && location.pathname !== "/") {
+      return null
+    }
+
+    return propsIfActive
+  }
+
+  return null
+}
+
 const MenuLink = props => (
   <Link
     to={props.to}
@@ -26,7 +38,7 @@ const MenuLink = props => (
         }
       }
     `}
-    activeStyle={{ opacity: 1 }}
+    getProps={isActive({ style: { opacity: 1 } })}
   >
     {props.children}
   </Link>
