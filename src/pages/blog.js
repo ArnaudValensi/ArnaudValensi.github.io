@@ -9,33 +9,36 @@ export default function Blog({ data }) {
   return (
     <Layout>
       <SEO title="Blog" description="All the blog posts from Arnaud Valensi" />
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link
-            to={`/blog${node.fields.slug}`}
+      <main>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <article
+            key={node.fields.slug}
             css={css`
-              text-decoration: none;
-              color: inherit;
+              margin-bottom: ${rhythm(2)};
             `}
           >
-            <h3
-              css={css`
-                margin-bottom: ${rhythm(1 / 4)};
-              `}
-            >
-              {node.frontmatter.title}{" "}
-              <span
+            <header>
+              <Link
+                to={`/blog${node.fields.slug}`}
                 css={css`
-                  color: #555;
+                  text-decoration: none;
+                  color: inherit;
                 `}
               >
-                — {node.frontmatter.date}
-              </span>
-            </h3>
+                <h3
+                  css={css`
+                    margin-bottom: ${rhythm(1 / 4)};
+                  `}
+                >
+                  {node.frontmatter.title}{" "}
+                </h3>
+              </Link>
+              <small>{node.frontmatter.date}</small>
+            </header>
             <p>{node.frontmatter.description}</p>
-          </Link>
-        </div>
-      ))}
+          </article>
+        ))}
+      </main>
     </Layout>
   )
 }
@@ -45,7 +48,6 @@ export const query = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          id
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
