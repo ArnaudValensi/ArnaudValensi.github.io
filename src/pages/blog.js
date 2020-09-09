@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 export default function Blog({ data }) {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
