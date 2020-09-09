@@ -1,10 +1,10 @@
 body {
   --bg: #f8f8f2;
-  --websiteTitle: #58a897;
+  --websiteTitle: #2766a7;
   --textNormal: #282a36;
-  --textTitle: #2766a7;
-  --menuLink: #58a897;
-  --textLink: #9f5ea0;
+  --textTitle: #1898d4;
+  --menuLink: #2766a7;
+  --textLink: #1898d4;
 
   background-color: var(--bg);
   transition: color 0.2s ease-out, background 0.2s ease-out;
