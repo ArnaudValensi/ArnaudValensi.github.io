@@ -32,7 +32,7 @@ export default function Blog({ data }) {
                 — {node.frontmatter.date}
               </span>
             </h3>
-            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.description}</p>
           </Link>
         </div>
       ))}
@@ -49,11 +49,11 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            description
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }
