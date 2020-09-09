@@ -125,7 +125,7 @@ export default function Layout({ children }) {
         css={css`
           display: flex;
           flex-direction: row-reverse;
-          margin-bottom: ${rhythm(2)};
+          margin-bottom: ${rhythm(3)};
           justify-content: center;
 
           @media (min-width: 576px) {
