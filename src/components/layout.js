@@ -70,10 +70,11 @@ export default function Layout({ children }) {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-bottom: ${rhythm(1 / 2)};
+          margin-bottom: ${rhythm(2)};
 
           @media (min-width: 576px) {
             flex-direction: row;
+            margin-bottom: ${rhythm(1 / 2)};
           }
         `}
       >
@@ -125,6 +126,11 @@ export default function Layout({ children }) {
           display: flex;
           flex-direction: row-reverse;
           margin-bottom: ${rhythm(2)};
+          justify-content: center;
+
+          @media (min-width: 576px) {
+            justify-content: unset;
+          }
         `}
       >
         <DarkModeToggler />
