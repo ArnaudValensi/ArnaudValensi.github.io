@@ -2,11 +2,11 @@
 
 body {
   --bg: #f8f8f2;
-  --websiteTitle: #6272a4;
+  --websiteTitle: #58a897;
   --textNormal: #282a36;
-  --textTitle: #6272a4;
-  --menuLink: #6272a4;
-  --textLink: #6272a4;
+  --textTitle: #2766a7;
+  --menuLink: #58a897;
+  --textLink: #9f5ea0;
 
   background-color: var(--bg);
   transition: color 0.2s ease-out, background 0.2s ease-out;
@@ -15,12 +15,12 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
 
-  --bg: #282a36;
-  --websiteTitle: #50fa7b;
+  --bg: #232838;
+  --websiteTitle: #dd8a9c;
   --textNormal: #f8f8f2;
-  --textTitle: #ff79c6;
-  --menuLink: #bd93f9;
-  --textLink: #8be9fd;
+  --textTitle: #f8d72c;
+  --menuLink: #dd8a9c;
+  --textLink: #8dd6f8;
 }
 
 h1,
