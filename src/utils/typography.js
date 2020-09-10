@@ -8,16 +8,6 @@ const customTheme = {
   baseLineHeight: 1.44,
   scaleRatio: 2.15,
   blockMarginBottom: 0.75,
-  googleFonts: [
-    {
-      name: "Patua One",
-      styles: ["400", "900"],
-    },
-    {
-      name: "Fira Sans",
-      styles: ["400", "400i", "700", "700i"],
-    },
-  ],
   headerFontFamily: ["Patua One", "sans-serif"],
   bodyFontFamily: ["Fira Sans", "sans-serif"],
   headerColor: "hsla(0,0%,0%,1)",
