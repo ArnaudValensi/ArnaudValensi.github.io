@@ -7,7 +7,7 @@ const customTheme = {
   baseFontSize: "18px",
   baseLineHeight: 1.44,
   scaleRatio: 2.15,
-  blockMarginBottom: 0.75,
+  blockMarginBottom: 1,
   headerFontFamily: ["Patua One", "sans-serif"],
   bodyFontFamily: ["Fira Sans", "sans-serif"],
   headerColor: "hsla(0,0%,0%,1)",
