@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <Layout>
       <SEO title="Contact Me" description="Arnaud Valensi's contact details" />
-      <div
+      <main
         css={css`
           text-align: center;
         `}
@@ -39,7 +39,7 @@ export default function Contact() {
             Twitter
           </a>
         </p>
-      </div>
+      </main>
     </Layout>
   )
 }

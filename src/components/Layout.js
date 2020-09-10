@@ -65,76 +65,78 @@ export default function Layout({ children }) {
         transition: "color 2s ease-out, background 2s ease-out, background-color 2s ease-out";
       `}
     >
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: ${rhythm(2)};
-
-          @media (min-width: 576px) {
-            flex-direction: row;
-            margin-bottom: ${rhythm(1 / 2)};
-          }
-        `}
-      >
-        <Link
-          to="/"
-          css={css`
-            width: 100%;
-            margin-bottom: ${rhythm(2)};
-            text-align: center;
-
-            @media (min-width: 576px) {
-              width: unset;
-              margin-bottom: 0;
-              text-align: unset;
-            }
-          `}
-        >
-          <h2
-            css={css`
-              display: inline-block;
-              font-style: normal;
-              margin-bottom: 0;
-              color: var(--websiteTitle);
-            `}
-          >
-            {data.site.siteMetadata.title}
-          </h2>
-        </Link>
+      <header>
         <div
           css={css`
             display: flex;
             flex-direction: column;
-            margin-left: 0;
             align-items: center;
+            margin-bottom: ${rhythm(2)};
 
             @media (min-width: 576px) {
-              margin-left: auto;
               flex-direction: row;
+              margin-bottom: ${rhythm(1 / 2)};
             }
           `}
         >
-          <MenuLink to="/">About Me</MenuLink>
-          <MenuLink to="/blog/">Blog</MenuLink>
-          <MenuLink to="/contact/">Contact Me</MenuLink>
-        </div>
-      </div>
-      <div
-        css={css`
-          display: flex;
-          flex-direction: row-reverse;
-          margin-bottom: ${rhythm(3)};
-          justify-content: center;
+          <Link
+            to="/"
+            css={css`
+              width: 100%;
+              margin-bottom: ${rhythm(2)};
+              text-align: center;
 
-          @media (min-width: 576px) {
-            justify-content: unset;
-          }
-        `}
-      >
-        <DarkModeToggler />
-      </div>
+              @media (min-width: 576px) {
+                width: unset;
+                margin-bottom: 0;
+                text-align: unset;
+              }
+            `}
+          >
+            <h2
+              css={css`
+                display: inline-block;
+                font-style: normal;
+                margin-bottom: 0;
+                color: var(--websiteTitle);
+              `}
+            >
+              {data.site.siteMetadata.title}
+            </h2>
+          </Link>
+          <nav
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin-left: 0;
+              align-items: center;
+
+              @media (min-width: 576px) {
+                margin-left: auto;
+                flex-direction: row;
+              }
+            `}
+          >
+            <MenuLink to="/">About Me</MenuLink>
+            <MenuLink to="/blog/">Blog</MenuLink>
+            <MenuLink to="/contact/">Contact Me</MenuLink>
+          </nav>
+        </div>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: ${rhythm(3)};
+            justify-content: center;
+
+            @media (min-width: 576px) {
+              justify-content: unset;
+            }
+          `}
+        >
+          <DarkModeToggler />
+        </div>
+      </header>
       <div>{children}</div>
     </div>
   )
