@@ -22,10 +22,11 @@ const MenuLink = props => (
     css={css`
       text-decoration: none;
       color: var(--menuLink);
-      transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-out;
       opacity: 60%;
       &:hover {
         opacity: 100%;
+        text-decoration: none;
       }
       & + & {
         margin-top: ${rhythm(1)};
@@ -62,7 +63,7 @@ export default function Layout({ children }) {
         padding: ${rhythm(2)} ${rhythm(1)};
         margin: 0 auto;
         max-width: 680px;
-        transition: "color 2s ease-out, background 2s ease-out, background-color 2s ease-out";
+        transition: "color 2s ease-out, background 2s ease-out";
       `}
     >
       <header>
