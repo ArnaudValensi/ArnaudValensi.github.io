@@ -53,19 +53,12 @@ def download_file(file_url, destination_folder):
 
     return final_file_name
 
-
-def to_markdown(page_id, ignore):
-    page = client.get_block(page_id)
-    page_title = page.title
-    slug = slugify(page_title)
+def process_block(block, text_prefix = ''):
+    was_bulleted_list = False
     text = ''
     metas = []
-    was_bulleted_list = False
 
-    # Handle Frontmatter
-    metas.append(f'title: {page_title}')
-
-    for content in page.children:
+    for content in block.children:
         # Close the bulleted list.
         if was_bulleted_list and content.type != 'bulleted_list':
             text = text + '\n'
@@ -81,18 +74,19 @@ def to_markdown(page_id, ignore):
             text = text + f'```{content.language}\n{content.title}\n```\n\n'
         elif content.type == 'image':
             image_name = download_file(content.source, dest_path)
-            text = text + f'![{image_name}]({image_name})\n\n'
+            text = text + text_prefix + f'![{image_name}]({image_name})\n\n'
         elif content.type == 'bulleted_list':
-            text = text + f'* {content.title}\n'
+            text = text + text_prefix + f'* {content.title}\n'
             was_bulleted_list = True
         elif content.type == 'divider':
             text = text + f'---\n'
         elif content.type == 'text':
             matchMeta = regex_meta.match(content.title)
             if matchMeta:
+                pass
                 metas.append(matchMeta.group(1))
             else:
-                text = text + f'{content.title}\n\n'
+                text = text + text_prefix + f'{content.title}\n\n'
         elif content.type == 'video':
             text = text + f'`video: {content.source}`\n\n'
         elif content.type == 'page':
@@ -101,6 +95,27 @@ def to_markdown(page_id, ignore):
         else:
             print("Unsupported type: " + content.type)
 
+        if len(content.children) and content.type != 'page':
+            child_text, child_metas = process_block(content, '  ')
+            text = text + child_text
+            metas = metas + child_metas
+
+    return text, metas
+
+
+def to_markdown(page_id, ignore):
+    page = client.get_block(page_id)
+    page_title = page.title
+    slug = slugify(page_title)
+    text = ''
+    metas = []
+
+    # Handle Frontmatter
+    metas.append(f'title: {page_title}')
+
+    text, child_metas = process_block(page)
+
+    metas = metas + child_metas
     metaText = '---\n' + '\n'.join(metas) + '\n---\n'
     text = metaText + text
 
