@@ -85,7 +85,7 @@ I've used Unity a lot, but also custom-tailored game engine depending on the pro
 
 I've used Rust for about a year on a side project. I enjoy the architecture that emerges from languages with strong rules like Rust and Haskell.
 
-### Other skills
+### Other Skills
 
 - Haskell:
 
@@ -93,7 +93,7 @@ I've used Rust for about a year on a side project. I enjoy the architecture that
 
   I see how Haskell robustness (strong static typing, purity, and immutability) can increase productivity in the long run, therefore I would be very interested to use it on a freelance project.
 
-## My manifesto
+## Some Personal Thoughts
 
 I adhere to the [Agile Manifesto](https://agilemanifesto.org/principles.html) and the [Software Craftsmanship Manifesto](https://manifesto.softwarecraftsmanship.org/).
 
@@ -153,21 +153,21 @@ Romain Gauthier, Data Scientist @ Intersec
 
 Source: [LinkedIn](https://www.linkedin.com/in/arnaud-valensi-04080084/)
 
-## Technical books I like
+## Technical Books I Like
 
 - [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/book/show/3735293-clean-code)
 - [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture?ac=1&from_search=true&qid=dx9N2Y1YL9&rank=1)
 - [Rework](https://www.goodreads.com/book/show/6732019-rework?ac=1&from_search=true&qid=9RD18c285o&rank=1)
 - [Get Programming with Haskell](https://www.goodreads.com/book/show/31338521-get-programming-with-haskell?ac=1&from_search=true&qid=NkyykSYulz&rank=1)
 
-## Latest novel readings
+## Latest Novel Readings
 
 - [The Outside by Stephen King](https://www.goodreads.com/book/show/36124936-the-outsider?ac=1&from_search=true&qid=oLJvuiOxJ7&rank=4)
 - [The Institute by Stephen King](https://www.goodreads.com/book/show/43798285-the-institute?ac=1&from_search=true&qid=GGGJjFqUgN&rank=1)
 - [Le Signal by Maxime Chattam](https://www.goodreads.com/book/show/42548217-le-signal?ac=1&from_search=true&qid=Xpq0su5Dj8&rank=1)
 - [Autre-Monde by Maxime Chattam](https://www.goodreads.com/book/show/5505135-l-alliance-des-trois?ac=1&from_search=true&qid=hbhGlCr5l4&rank=1)
 
-## Some video games I like
+## Some Video Games I Like
 
 - All Zelda games but especially Breath of the Wild
 - Minecraft
@@ -176,8 +176,8 @@ Source: [LinkedIn](https://www.linkedin.com/in/arnaud-valensi-04080084/)
 - All the Uncharted games
 - Hitman
 
-## In my spare time
+## In My Spare Time
 
 - FPV drone (TODO: link)
 - Running
-- Travel (USA, Canada, India, UK, Ireland, Spain, Italy, Belgium, Netherlands, Germany, Hungary, Morocco)
+- Travel (USA, Canada, India, UK, Ireland, Spain, Italy, Belgium, Netherlands, Germany, Hungary, Greece, Morocco)
