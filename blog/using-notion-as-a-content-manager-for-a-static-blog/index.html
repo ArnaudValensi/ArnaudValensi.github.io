@@ -78,7 +78,14 @@ void function() {
 <li>I would like my blog to import locally the notes from Notion.</li>
 <li>I would like my blog to import locally the images of the notes.</li>
 <li>I would like any video link to display well.</li>
-<li>I would like my blog to regenerate a static website each time:</li>
+<li>
+<p>I would like my blog to regenerate a static website each time:</p>
+<ul>
+<li>I make a change on the code</li>
+<li>every day</li>
+<li>when I manually ask it to</li>
+</ul>
+</li>
 </ul>
 <h2>Importing Notes From Notion</h2>
 <p>To get the data from Notion, the most flexible tool I found is the <a href="https://github.com/jamalex/notion-py">notion-py</a> python library. It allows getting notion note modelized as an array of blocks, each block being a text line, a title, an image, a list item, etc.</p>
@@ -148,7 +155,39 @@ I create a <code class="language-text">deploy.yml</code> file in the <code class
 <p>In the <code class="language-text">on:</code> section:</p>
 <ul>
 <li><code class="language-text">schedule</code> tell to run this on a specific interval, here every day at midnight UTC.</li>
-<li><code class="language-text">workflow_dispatch</code> allows you to have a button on your GitHub interface to manually trigger the deploy.</li>
+<li><code class="language-text">workflow_dispatch</code> allows you to have a button on your GitHub interface to manually trigger the deploy.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4b9d12cb31e3b60add14f22ea1146079/3145a/d35e209efa49a70204ce3d286270402b720b965f.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.11764705882354%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABYlAAAWJQFJUiTwAAACOElEQVQoz3VRS08TURSe3+MCE9GApKSVIoom/huXrk3YkeDan+DChcYNEBWp5dVCX9BpETrtPDrPO3Pfd65niglJE0/OfDmZe79zvnM/o7K++fL1m+rGZvXFq1J5rVR+9nS1Uq5uLJery6trpcrzlfL6Srm6sLj04OHju1x4Unq0tLq4VDLO251a4/Lw7KrevNw/6u4f9XZ/d37Vu/1evz8YmoNrczC87JvHp43mRbvV6Z42zlvtDmC70zNUrlHGUiKSjGZUeAhHVxO/3sNNk966RAjGBBcSpRnnAhMKqbWWKs9zbTAhMeNcqQRzzARTIvcCMbTE9YRNI1qQOdBmUKCQEshKKSGkkTMiIj9XXBGuOY+ottPcDwPH91GWpUUg+DKoEYJxGSauN8WYAN/48bn7duvk/U7j3XZra/sstfwIszRBlFC4qv7FrAChIFjKmVAFtTFqO3s/JweH9u73ce1g7Fu27drWeALD9H8CmoJmQGPuAFaKk4QQClIpvR8uJZwIIThMJoyFcSKUNIo+qkglc53rIM7MkefFJEDcR2yaUC+mQcrdmDgRsQPs+pljh44TR1F2Pzmf4SSW5yPcsrLW+A5J8wZ1HTYM877PB7G2bpD/7cT5UkMnw3nZIGviTlGGaeEqg2SgVWmUkMTyUZAU/goFRksu5smwXlBEyBmDRWfuCvjfrdc+fvpQ3/uqVaERWkip5snwHrbj/rm59bwpZay4NVsovB11Lo4d0wSjwigG3+EB/wJZ/rJgqkHp+gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="d35e209efa49a70204ce3d286270402b720b965f.png"
+        title="d35e209efa49a70204ce3d286270402b720b965f.png"
+        src="/static/4b9d12cb31e3b60add14f22ea1146079/c5bb3/d35e209efa49a70204ce3d286270402b720b965f.png"
+        srcset="/static/4b9d12cb31e3b60add14f22ea1146079/04472/d35e209efa49a70204ce3d286270402b720b965f.png 170w,
+/static/4b9d12cb31e3b60add14f22ea1146079/9f933/d35e209efa49a70204ce3d286270402b720b965f.png 340w,
+/static/4b9d12cb31e3b60add14f22ea1146079/c5bb3/d35e209efa49a70204ce3d286270402b720b965f.png 680w,
+/static/4b9d12cb31e3b60add14f22ea1146079/b12f7/d35e209efa49a70204ce3d286270402b720b965f.png 1020w,
+/static/4b9d12cb31e3b60add14f22ea1146079/b5a09/d35e209efa49a70204ce3d286270402b720b965f.png 1360w,
+/static/4b9d12cb31e3b60add14f22ea1146079/3145a/d35e209efa49a70204ce3d286270402b720b965f.png 2112w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
 <li><code class="language-text">push</code> allows you to trigger the deploy on a specific branch push.</li>
 </ul>
 <p>Then the script does the following deploy steps:</p>
