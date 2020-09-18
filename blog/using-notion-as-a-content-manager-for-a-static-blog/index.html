@@ -101,50 +101,50 @@ description: How to use Notion as a content manager to generate a static blog.
 <p>I want to deploy on Github pages. To do this manually, we can use the npm package <a href="https://www.npmjs.com/package/gh-pages">gh-pages</a> like this <code class="language-text">gh-pages -d public</code>. This is nice, but I prefer to automate this part.</p>
 <p>I use a "workflow" made with <a href="https://github.com/features/actions">Github Actions</a>.
 I create a <code class="language-text">deploy.yml</code> file in the <code class="language-text">.github/workflows</code> directory of my repository:</p>
-<div class="gatsby-highlight" data-language="plaintext"><pre class="language-plaintext"><code class="language-plaintext">name: Build and Deploy
-on:
-  schedule:
-    - cron: &quot;0 0 * * *&quot; # Every day at midnight.
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span> <span class="token comment"># Every day at midnight.</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build-and-deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python 3.8
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.8</span>
 
-      - name: Set up pipenv
-        uses: dschep/install-pipenv-action@v1
-        with:
-          version: 2020.8.13
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up pipenv
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> dschep/install<span class="token punctuation">-</span>pipenv<span class="token punctuation">-</span>action@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">version</span><span class="token punctuation">:</span> 2020.8.13
 
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.2 # If you&#39;re using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout 🛎️
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2.3.2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">persist-credentials</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the &#39;build&#39; folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
-        run: |
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install and Build 🔧
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">NOTION_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.NOTION_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">NOTION_ROOT_PAGE_ID</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.NOTION_ROOT_PAGE_ID <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
           pipenv install
           pipenv run python ./bin/get-blog-posts.py
           yarn install
-          yarn build
+          yarn build</span>
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.5.9
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true</code></pre></div>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy 🚀
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> JamesIves/github<span class="token punctuation">-</span>pages<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>action@3.5.9
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">GITHUB_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">BRANCH</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages
+          <span class="token key atrule">FOLDER</span><span class="token punctuation">:</span> public
+          <span class="token key atrule">CLEAN</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre></div>
 <p>In the <code class="language-text">on:</code> section:</p>
 <ul>
 <li><code class="language-text">schedule</code> tell to run this on a specific interval, here every day at midnight UTC.</li>
@@ -161,4 +161,5 @@ jobs:
 <li>it deploys on GitHub pages</li>
 </ul>
 <p>And we're all set. We can now create our blog posts inside Notion. When we are done editing the post, we can move the note in the root note and either wait the next day to publish it or go in the GitHub interface to ask a rebuild and the blog gets updated. I really enjoy this workflow because there is very little friction to go from a note to a blog post.</p>
-<p>Thank you for reading and tell me in the comments what is your preferred way to edit a blog.</p></div></article></main><style data-emotion-css="v9xk35">.css-v9xk35{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-top:4.32rem;}</style><nav class="css-v9xk35"><div></div><div><a rel="next" href="/blog/my-first-blog-post/">My First Blog Post<!-- --> →</a></div></nav></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/using-notion-as-a-content-manager-for-a-static-blog/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b0a644f56da2fcb271c9.js"],"app":["/app-77f2f9faea8da66eaa40.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e9a962f82254429b9322.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-a82b19dc7ec710e71bd8.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-dfb2f72ccfa206ee0407.js"],"component---src-pages-index-js":["/component---src-pages-index-js-5b7245fcc765a73f2f7f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3174307556f477f133ab.js"]};/*]]>*/</script><script src="/polyfill-b0a644f56da2fcb271c9.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-3174307556f477f133ab.js" async=""></script><script src="/f22e65116e117537b01f54252158ffae588a680c-6f2e737f0b316a4d037e.js" async=""></script><script src="/commons-f621d39b0fb88229cdc1.js" async=""></script><script src="/styles-c2fe8482057191dca484.js" async=""></script><script src="/app-77f2f9faea8da66eaa40.js" async=""></script><script src="/framework-b20a991a486fcb196e62.js" async=""></script><script src="/webpack-runtime-d5e03fcacbf72e90ed48.js" async=""></script></body></html>
+<p>The source code of this blog is available here <a href="https://github.com/ArnaudValensi/ArnaudValensi.github.io">https://github.com/ArnaudValensi/ArnaudValensi.github.io</a></p>
+<p>Thank you for reading and tell me in the comments what is your preferred way to edit a blog.</p></div></article></main><style data-emotion-css="v9xk35">.css-v9xk35{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-top:4.32rem;}</style><nav class="css-v9xk35"><div></div><div></div></nav></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/using-notion-as-a-content-manager-for-a-static-blog/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b0a644f56da2fcb271c9.js"],"app":["/app-77f2f9faea8da66eaa40.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e9a962f82254429b9322.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-a82b19dc7ec710e71bd8.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-dfb2f72ccfa206ee0407.js"],"component---src-pages-index-js":["/component---src-pages-index-js-5b7245fcc765a73f2f7f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3174307556f477f133ab.js"]};/*]]>*/</script><script src="/polyfill-b0a644f56da2fcb271c9.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-3174307556f477f133ab.js" async=""></script><script src="/f22e65116e117537b01f54252158ffae588a680c-6f2e737f0b316a4d037e.js" async=""></script><script src="/commons-f621d39b0fb88229cdc1.js" async=""></script><script src="/styles-c2fe8482057191dca484.js" async=""></script><script src="/app-77f2f9faea8da66eaa40.js" async=""></script><script src="/framework-b20a991a486fcb196e62.js" async=""></script><script src="/webpack-runtime-d5e03fcacbf72e90ed48.js" async=""></script></body></html>
