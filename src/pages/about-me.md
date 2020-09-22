@@ -93,47 +93,6 @@ I've used Rust for about a year on a side project. I enjoy the architecture that
 
   I see how Haskell robustness (strong static typing, purity, and immutability) can increase productivity in the long run, therefore I would be very interested to use it on a freelance project.
 
-## Some Personal Thoughts
-
-I adhere to the [Agile Manifesto](https://agilemanifesto.org/principles.html) and the [Software Craftsmanship Manifesto](https://manifesto.softwarecraftsmanship.org/).
-
-I discipline myself to be rigorous.
-
-I believe we should use the right tool for the job, not the other way around. This is why we must be able to adapt.
-
-But I also believe that the role of an engineer is to make the best decisions based on a goal and a set of constraints. Therefore, there is no general truth, only compromises. Understanding the constraints is not always easy and it's part of a developer's job, it requires communication and understanding between business teams and developers.
-
-I think that someone passionated in his profession will often add more value than someone who is not. In software engineering, this may mean [10 or 100 times the productivity](https://medium.com/javascript-scene/getting-to-10x-results-what-any-developer-can-learn-from-the-best-54b6c296a5ef).
-
-I believe that great products are made by great teams. One aspect of what makes a great team is the ability to communicate safely. It is healthy to argue and have a strong opinion when we remember that it is to be closer to the goal, not to make the ego right. As a team, we have the same goal: to focus on the result, and when we do, we can grow through conflict.
-
-The traits I think are bad in a team member:
-
-- arrogant
-- incompetent
-- uncooperative
-- unmotivated
-
-The traits I think are good in a team member:
-
-- problem solver
-- skilled
-- mentor
-- learner
-- passionate
-
-I think perseverance is a strengh but stubbornness is a weakness.
-
-As a team member, we should think about what we can do to improve others in their work. If everyone does this, the team can multiply its potential.
-
-I believe It is ok to be wrong and we must not fear mistakes, only those who don't try don't make mistakes.
-
-But I believe we also have to take responsibility. This is part of building trust and confidence.
-
-Besides, I believe communication is essential. And I think that's true for any relationship. Most of the issues we can have with each other are due to misunderstandings, lack of empathy, or divergent values, and most of these issues can be resolved through communication. Also, we should not be afraid to speak out because of the fear of conflict, because most of the time there is no real conflict, and when there is, we often come out with a stronger bond. Also, it is very rewarding and valuable to have different opinions.
-
-I believe that the mind is part of the body, so doing exercise is also required to improve our skills. Thus, a clear work-life balance is important.
-
 ## Recommendations
 
 > Arnaud worked at Forest Admin for nearly 2 years and the whole technical team is sad to lose him.
