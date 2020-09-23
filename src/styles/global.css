@@ -37,3 +37,10 @@ body.dark {
 pre[class*="language-"] {
   background: var(--code-bg);
 }
+
+/* Inline code & code */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  font-variant-ligatures: none;
+  font-feature-settings: normal;
+}
