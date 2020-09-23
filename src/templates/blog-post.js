@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { rhythm } from "../utils/typography"
 import { css } from "@emotion/core"
+import Utterances from "../components/Utterances"
 
 export default function BlogPost({ data, pageContext }) {
   const { previousPost, nextPost } = pageContext
@@ -61,6 +62,13 @@ export default function BlogPost({ data, pageContext }) {
           )}
         </div>
       </nav>
+      <Utterances
+        repo="ArnaudValensi/arnaudvalensi-comments"
+        issueTerm="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async={true}
+      />
     </Layout>
   )
 }
