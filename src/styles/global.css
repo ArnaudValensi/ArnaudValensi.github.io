@@ -5,6 +5,9 @@ body {
   --textTitle: #1898d4;
   --menuLink: #e06882;
   --textLink: #1898d4;
+  --inlineCode-bg: #df698245;
+  --inlineCode-text: #1a1a1a;
+  --code-bg: rgb(51, 58, 75);
 
   background-color: var(--bg);
   transition: color 0.2s ease-out, background 0.2s ease-out;
@@ -19,4 +22,18 @@ body.dark {
   --textTitle: #f8d72c;
   --menuLink: #dd8a9c;
   --textLink: #8dd6f8;
+  --inlineCode-bg: rgb(51, 58, 75);
+  --inlineCode-text: #e6e6e6;
+  --code-bg: rgb(51, 58, 75);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode-text);
+}
+
+/* Code */
+pre[class*="language-"] {
+  background: var(--code-bg);
 }
