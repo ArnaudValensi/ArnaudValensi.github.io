@@ -23,6 +23,10 @@ export default function Blog({ data }) {
                 css={css`
                   text-decoration: none;
                   color: inherit;
+
+                  &:hover {
+                    text-decoration-color: var(--textTitle);
+                  }
                 `}
               >
                 <h3

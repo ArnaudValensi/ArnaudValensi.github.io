@@ -1,9 +1,9 @@
 body {
   --bg: #f8f8f2;
-  --websiteTitle: #2766a7;
+  --websiteTitle: #e06882;
   --textNormal: #282a36;
   --textTitle: #1898d4;
-  --menuLink: #2766a7;
+  --menuLink: #e06882;
   --textLink: #1898d4;
 
   background-color: var(--bg);

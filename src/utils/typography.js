@@ -24,6 +24,7 @@ const customTheme = {
     },
     "a:hover": {
       textDecoration: "underline",
+      textDecorationColor: "var(--textLink)",
     },
     blockquote: {
       ...scale(1 / 5),
