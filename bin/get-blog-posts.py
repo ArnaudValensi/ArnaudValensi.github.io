@@ -24,7 +24,7 @@ dest_path = os.path.normpath(os.path.join(
     os.path.dirname(__file__), '..', 'content', 'blog'))
 
 markdown_pages = {}
-regex_meta = re.compile('^== *(.+) *$')
+regex_meta = re.compile(r'^== *(\w+) *:* (.+) *$')
 ignore_root = True
 
 
@@ -53,7 +53,8 @@ def download_file(file_url, destination_folder):
 
     return final_file_name
 
-def process_block(block, text_prefix = ''):
+
+def process_block(block, text_prefix=''):
     was_bulleted_list = False
     text = ''
     metas = []
@@ -83,8 +84,9 @@ def process_block(block, text_prefix = ''):
         elif content.type == 'text':
             matchMeta = regex_meta.match(content.title)
             if matchMeta:
-                pass
-                metas.append(matchMeta.group(1))
+                key = matchMeta.group(1)
+                value = matchMeta.group(2)
+                metas.append(f"{key}: '{value}'")
             else:
                 text = text + text_prefix + f'{content.title}\n\n'
         elif content.type == 'video':
@@ -111,7 +113,7 @@ def to_markdown(page_id, ignore):
     metas = []
 
     # Handle Frontmatter
-    metas.append(f'title: {page_title}')
+    metas.append(f"title: '{page_title}'")
 
     text, child_metas = process_block(page)
 
