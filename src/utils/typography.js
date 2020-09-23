@@ -1,5 +1,4 @@
 import Typography from "typography"
-import gray from "gray-percentage"
 import { MOBILE_MEDIA_QUERY } from "typography-breakpoint-constants"
 
 const customTheme = {
@@ -28,11 +27,13 @@ const customTheme = {
     },
     blockquote: {
       ...scale(1 / 5),
-      color: gray(41),
+      color: "inherit",
+      opacity: "0.8",
       fontStyle: "italic",
       paddingLeft: rhythm(13 / 16),
       marginLeft: 0,
-      borderLeft: `${rhythm(3 / 16)} solid ${gray(80)}`,
+      borderLeft: `${rhythm(3 / 16)} solid`,
+      borderLeftColor: "inherit",
     },
     "blockquote > :last-child": {
       marginBottom: 0,
