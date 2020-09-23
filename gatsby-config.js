@@ -7,6 +7,12 @@ module.exports = {
     author: `Arnaud Valensi`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-178749604-1`,
+      },
+    },
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-emotion`,
     {
