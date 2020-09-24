@@ -34,6 +34,14 @@ export default function BlogPost({ data, pageContext }) {
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
+        <div
+          css={css`
+            margin-top: ${rhythm(1)};
+          `}
+        >
+          PS: 🧙📜 I'm looking for a freelance mission.{" "}
+          <Link to="/">See here.</Link>
+        </div>
       </main>
       <nav
         css={css`
@@ -41,6 +49,7 @@ export default function BlogPost({ data, pageContext }) {
           flex-wrap: wrap;
           justify-content: space-between;
           margin-top: ${rhythm(3)};
+          margin-bottom: ${rhythm(3)};
         `}
       >
         <div>
