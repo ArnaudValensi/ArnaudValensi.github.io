@@ -49,18 +49,18 @@ Finally, I enjoy sharing these experiences with my friends or find new ones, thi
 
 ### Skills
 
-I've used both Unity and custom-tailored **C** and **C++** game engines, depending on the project.
+I've used both **Unity** and custom-tailored **C** and **C++** game engines, depending on the project.
 
 I appreciate the architecture that emerges from languages with strong rules like **Rust** and **Haskell**. The overload of time to develop a project with these may not be worth it for a small project, but it's a huge payoff, in the long run, if you consider the number of bugs and runtime errors they remove. I used Rust for about a year on a side project and would be very willing to use it more.
 
 My skills:
+
 - **Procedural generation**
 - **Network** (including for real-time FPS)
-- **UI**: I played with a wide variety of UI, from web to native ones like Qt with C++, through Unity and some custom ones. I consider myself productive in this area. 
+- **UI**: I played with a wide variety of UI, from web to native ones like Qt with C++, through Unity and some custom ones. I consider myself productive in this area.
 - **Game engine architecture**
 - **Gameplay programming**
 - **Gfx/shader**, I can implement Phong lighting, play with PBR, and do some effects with OpenGL, but I’m not a wizard of AAA games rendering pipeline. I’m not scared to work on this, but I would be slower than someone specialized.
-
 
 ## As a Full Stack Engineer / Architect
 
@@ -117,7 +117,7 @@ I'm a good fit if:
 
 ## Other Skills
 
-- Haskell:
+- **Haskell**:
 
   I've used Haskell for a few weeks. I've read [Get Programming with Haskell](https://www.goodreads.com/book/show/31338521-get-programming-with-haskell?ac=1&from_search=true&qid=NkyykSYulz&rank=1) and I'm now reading [Haskell in Depth](https://www.goodreads.com/book/show/41057179-haskell-in-depth?ac=1&from_search=true&qid=sQorv6E9UB&rank=1).
 
@@ -167,6 +167,6 @@ Source: [LinkedIn](https://www.linkedin.com/in/arnaud-valensi-04080084/)
 
 ## In My Spare Time
 
-- FPV drone (TODO: link)
+- [FPV drone](https://www.youtube.com/watch?v=4mMz1uWbhhU)
 - Running
 - Travel (USA, Canada, India, UK, Ireland, Spain, Italy, Belgium, Netherlands, Germany, Hungary, Greece, Morocco)
