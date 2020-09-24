@@ -6,7 +6,15 @@ title: About Me
 
 🧙📜 I'm looking for a freelance mission.
 
-I am specialized in full-stack engineering. Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
+I am specialized in video game and full-stack development. Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
+
+I started coding in 2001 at the age of 13. I was mainly doing web development at the time. I started studying programming in school in 2009 where I gained broader skills like system, network and AI programming using c, c ++, java. I became a graduate software engineer in 2014.
+
+I have always lived with video games. When teachers asked us what we wanted to do with our lives, at the age where the answers were astronaut, firefighter or princess, mine was being a video game maker.
+
+Today I don’t play much video games because when I do, it quickly gives me ideas that I look forward to implementing in my own projects. And I feel that programming itself is like the best video game ever.
+
+In fact, this desire for building things is not tied to video games, I like to make things in general, which is why I’m not only specialized in video games. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in growth marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or tell people what to do.
 
 ## Career
 
@@ -19,9 +27,9 @@ The most notable projects I've worked on, in chronological order are the followi
 - At Atos: I worked on a platform dedicated to the exploitation of big data.
 - At Intersec: A similar project, but this time for large French telecommunications companies.
 - [Mindup](http://mindup.io/) (co-founder): A social network that allows you to send messages to people around you. We had around 10,000 users, which was good for a first entrepreneurial experience, but far from the goal of making it a sustainable project.
-- CodeTown (founder): An interactive online platform that offers coding courses in different programming languages. It failed early.
+- CodeTown (founder): An interactive online platform that offers coding courses in different programming languages. Unfortunately, it failed early.
 - Chatel Properties (associate): A real estate company specialized in high-quality goods. It worked and it is still working, but I didn't want to build my career in real estate, so I left the company to take up other challenges.
-- [ForestAdmin](https://www.forestadmin.com/): A SaaS that plugs into your database to generate a full-featured admin panel. I worked there as a full-stack engineer for about two years. I touched on everything. This is where I've started to learn how to quickly scale a product with a very high growth rate. The conditions were perfect to live a very nice adventure: the team was nice and we raised 3M$ and 7M$. ForestAdmin started out as part of [eFounder](https://www.efounders.com/), a start-up studio that has created many successful companies such as [Mailjet](https://www.efounders.com/companies/mailjet), [Spendesk](https://www.efounders.com/companies/spendesk), [Front](https://www.efounders.com/companies/front), [Slite](https://www.efounders.com/companies/slite), [Aircall](https://www.efounders.com/companies/aircall) and more. I have worked both as an employee of eFounder and ForestAdmin and knowing this ecosystem made my skills step up a lot.
+- [ForestAdmin](https://www.forestadmin.com/): A SaaS that plugs into your database to generate a full-featured admin panel. I worked there as a full-stack engineer for about two years. I touched on everything. This is where I've started to learn how to quickly scale a product with a very high growth rate. The conditions were perfect to live a very nice adventure: the team was good and we raised 3M$ and 7M$. ForestAdmin started out as part of [eFounder](https://www.efounders.com/), a start-up studio that has created many successful companies such as [Mailjet](https://www.efounders.com/companies/mailjet), [Spendesk](https://www.efounders.com/companies/spendesk), [Front](https://www.efounders.com/companies/front), [Slite](https://www.efounders.com/companies/slite), [Aircall](https://www.efounders.com/companies/aircall) and more. I have worked both as an employee of eFounder and ForestAdmin and knowing this ecosystem made my skills step up a lot.
 - BigSeed Studio (founder): I am now working in my own business on my own indie video game. The idea is to alternate between the development of my game and periods of consulting / freelance.
 
 ## Skills
@@ -91,7 +99,7 @@ I've used Rust for about a year on a side project. I enjoy the architecture that
 
   I've used Haskell for a few weeks. I've read [Get Programming with Haskell](https://www.goodreads.com/book/show/31338521-get-programming-with-haskell?ac=1&from_search=true&qid=NkyykSYulz&rank=1) and I'm now reading [Haskell in Depth](https://www.goodreads.com/book/show/41057179-haskell-in-depth?ac=1&from_search=true&qid=sQorv6E9UB&rank=1).
 
-  I see how Haskell robustness (strong static typing, purity, and immutability) can increase productivity in the long run, therefore I would be very interested to use it on a freelance project.
+  I see how Haskell robustness (strong static typing, purity, and immutability) can increase productivity in the long run, therefore I would be interested to use it on a freelance project.
 
 ## Recommendations
 
