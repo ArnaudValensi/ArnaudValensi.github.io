@@ -6,15 +6,17 @@ title: About Me
 
 🧙📜 I'm looking for a freelance mission.
 
-I am specialized in video game and full-stack development. Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
+I'm a software engineer specialized in video game development, game design and full-stack development. Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
 
-I started coding in 2001 at the age of 13. I was mainly doing web development at the time. I started studying programming in school in 2009 where I gained broader skills like system, network and AI programming using c, c ++, java. I became a graduate software engineer in 2014.
+I would preferably work in the game industry, but not necessarily, and if it is I would preferably work on a video game, but not necessarily.
+
+I started coding in 2001 at the age of 13. I was mainly doing web development at the time. I started studying programming in school in 2009 where I gained broader skills like system, network and AI programming using c, c++, java. I became a graduate software engineer in 2014.
 
 I have always lived with video games. When teachers asked us what we wanted to do with our lives, at the age where the answers were astronaut, firefighter or princess, mine was being a video game maker.
 
 Today I don’t play much video games because when I do, it quickly gives me ideas that I look forward to implementing in my own projects. And I feel that programming itself is like the best video game ever.
 
-In fact, this desire for building things is not tied to video games, I like to make things in general, which is why I’m not only specialized in video games. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in growth marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or tell people what to do.
+In fact, my desire for building things is not tied to video games, I like to make things in general, which is why I’m not only specialized in video games. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in growth marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or tell people what to do.
 
 ## Career
 
@@ -32,9 +34,37 @@ The most notable projects I've worked on, in chronological order are the followi
 - [ForestAdmin](https://www.forestadmin.com/): A SaaS that plugs into your database to generate a full-featured admin panel. I worked there as a full-stack engineer for about two years. I touched on everything. This is where I've started to learn how to quickly scale a product with a very high growth rate. The conditions were perfect to live a very nice adventure: the team was good and we raised 3M$ and 7M$. ForestAdmin started out as part of [eFounder](https://www.efounders.com/), a start-up studio that has created many successful companies such as [Mailjet](https://www.efounders.com/companies/mailjet), [Spendesk](https://www.efounders.com/companies/spendesk), [Front](https://www.efounders.com/companies/front), [Slite](https://www.efounders.com/companies/slite), [Aircall](https://www.efounders.com/companies/aircall) and more. I have worked both as an employee of eFounder and ForestAdmin and knowing this ecosystem made my skills step up a lot.
 - BigSeed Studio (founder): I am now working in my own business on my own indie video game. The idea is to alternate between the development of my game and periods of consulting / freelance.
 
-## Skills
+## As a Video Game Engineer
 
-### As a Full Stack Engineer / Architect
+### My tastes
+
+My favorite game design elements are those around intrinsic motivation, emergent gameplay, and procedural generation.
+
+In games like Minecraft, Don’t Starve, Stardew Valley, you don’t necessarily have clear goals, you have to find your own. I find this motivation powerful and like the sensation of freedom.
+
+In games like Hitman or Breath Of The Wild, you do have clear goals but you have a variety of ways to achieve it. This triggers the problem-solving part of the brain in a very creative way.
+With procedurally generated worlds like in Minecraft, even the developers of the game can be amazed and spend hours going in adventure to discovers their own creations.
+
+Finally, I enjoy sharing these experiences with my friends or find new ones, this is why I tend to focus on building networked games.
+
+### Skills
+
+I've used both Unity and custom-tailored **C** and **C++** game engines, depending on the project.
+
+I appreciate the architecture that emerges from languages with strong rules like **Rust** and **Haskell**. The overload of time to develop a project with these may not be worth it for a small project, but it's a huge payoff, in the long run, if you consider the number of bugs and runtime errors they remove. I used Rust for about a year on a side project and would be very willing to use it more.
+
+My skills:
+- **Procedural generation**
+- **Network** (including for real-time FPS)
+- **UI**: I played with a wide variety of UI, from web to native ones like Qt with C++, through Unity and some custom ones. I consider myself productive in this area. 
+- **Game engine architecture**
+- **Gameplay programming**
+- **Gfx/shader**, I can implement Phong lighting, play with PBR, and do some effects with OpenGL, but I’m not a wizard of AAA games rendering pipeline. I’m not scared to work on this, but I would be slower than someone specialized.
+
+
+## As a Full Stack Engineer / Architect
+
+### Skills
 
 - **Programming language**:
   - JavaScript (browser & nodejs)
@@ -79,21 +109,13 @@ I am very interested in event sourcing technology like Kafka. I've never used it
 I'm a good fit if:
 
 - you want to architect a new system.
-- you want to scale an existing system.
 - you want some manpower for an existing project.
+- you want to scale an existing system.
 - you want to establish good coding practices.
 - you need to set up continuous integration and continuous delivery.
 - you want to implement agile processes for a project.
 
-### As a Video Game Engineer
-
-Programming language: C#, C/C++, Rust
-
-I've used Unity a lot, but also custom-tailored game engine depending on the project. I'm familiar with different aspects of the development of a 2d and 3d video game: general architecture, gfx, physic, gameplay, network programming for real-time games like FPSs, etc.
-
-I've used Rust for about a year on a side project. I enjoy the architecture that emerges from languages with strong rules like Rust and Haskell.
-
-### Other Skills
+## Other Skills
 
 - Haskell:
 
