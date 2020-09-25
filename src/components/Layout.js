@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import DarkModeToggler from "./DarkModeToggler"
+import ClientOnly from "./ClientOnly"
 
 const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
   if (isPartiallyCurrent) {
@@ -135,7 +136,9 @@ export default function Layout({ children }) {
             }
           `}
         >
-          <DarkModeToggler />
+          <ClientOnly>
+            <DarkModeToggler />
+          </ClientOnly>
         </div>
       </header>
       <div>{children}</div>
