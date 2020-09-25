@@ -115,12 +115,20 @@ def to_markdown(page_id, ignore):
     # Handle Frontmatter
     metas.append(f"title: '{page_title}'")
 
+    # Download the cover and add it to the frontmatter.
+    raw_page = page.get()
+    if 'format' in raw_page and 'page_cover' in raw_page['format']:
+        page_cover_url = raw_page['format']['page_cover']
+        cover_image_name = download_file(page_cover_url, dest_path)
+        metas.append(f"cover: '{dest_path}/{cover_image_name}'")
+
     text, child_metas = process_block(page)
 
     metas = metas + child_metas
     metaText = '---\n' + '\n'.join(metas) + '\n---\n'
     text = metaText + text
 
+    # Save the page data if it is not the root page.
     if not ignore:
         markdown_pages[slug] = text
 
