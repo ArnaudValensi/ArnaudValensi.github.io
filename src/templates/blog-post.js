@@ -100,6 +100,15 @@ export const query = graphql`
       frontmatter {
         title
         description
+        image: featured {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
