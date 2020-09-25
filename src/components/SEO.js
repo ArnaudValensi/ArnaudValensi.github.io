@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
+import defaultOpenGraphImage from "../images/open-graph-image.png"
 
 function SEO({ description, lang, image, meta, keywords, title, pathname }) {
   return (
@@ -10,11 +11,13 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+
+        const metaUrl = `${data.site.siteMetadata.siteUrl}${pathname}`
+
         const metaImage =
           image && image.src
             ? `${data.site.siteMetadata.siteUrl}${image.src}`
-            : null
-        const metaUrl = `${data.site.siteMetadata.siteUrl}${pathname}`
+            : `${data.site.siteMetadata.siteUrl}${defaultOpenGraphImage}`
 
         return (
           <Helmet
@@ -45,6 +48,26 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 content: `website`,
               },
               {
+                property: `og:image`,
+                content: metaImage,
+              },
+              {
+                property: `og:image:alt`,
+                content: title,
+              },
+              {
+                property: "og:image:width",
+                content: (image && image.width) || 1200,
+              },
+              {
+                property: "og:image:height",
+                content: (image && image.height) || 630,
+              },
+              {
+                name: `twitter:card`,
+                content: `summary_large_image`,
+              },
+              {
                 name: `twitter:creator`,
                 content: `@${data.site.siteMetadata.social.twitter}`,
               },
@@ -57,37 +80,6 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 content: metaDescription,
               },
             ]
-              .concat(
-                metaImage
-                  ? [
-                      {
-                        property: `og:image`,
-                        content: metaImage,
-                      },
-                      {
-                        property: `og:image:alt`,
-                        content: title,
-                      },
-                      {
-                        property: "og:image:width",
-                        content: image.width,
-                      },
-                      {
-                        property: "og:image:height",
-                        content: image.height,
-                      },
-                      {
-                        name: `twitter:card`,
-                        content: `summary_large_image`,
-                      },
-                    ]
-                  : [
-                      {
-                        name: `twitter:card`,
-                        content: `summary`,
-                      },
-                    ]
-              )
               .concat(
                 keywords.length > 0
                   ? {
