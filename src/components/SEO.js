@@ -33,7 +33,7 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 property: `og:title`,
-                content: title,
+                content: `${title} | ${data.site.siteMetadata.title}`,
               },
               {
                 property: `og:url`,
@@ -73,7 +73,7 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 name: `twitter:title`,
-                content: title,
+                content: `${title} | ${data.site.siteMetadata.title}`,
               },
               {
                 name: `twitter:description`,
