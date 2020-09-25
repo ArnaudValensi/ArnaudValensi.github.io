@@ -5,10 +5,14 @@ import { rhythm } from "../utils/typography"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/SEO"
 
-export default function Blog({ data }) {
+export default function Blog({ data, location }) {
   return (
     <Layout>
-      <SEO title="Blog" description="All the blog posts from Arnaud Valensi" />
+      <SEO
+        title="Blog"
+        description="All the blog posts from Arnaud Valensi"
+        pathname={location.pathname}
+      />
       <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article

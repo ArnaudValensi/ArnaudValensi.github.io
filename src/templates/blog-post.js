@@ -6,15 +6,20 @@ import { rhythm } from "../utils/typography"
 import { css } from "@emotion/core"
 import Utterances from "../components/Utterances"
 
-export default function BlogPost({ data, pageContext }) {
+export default function BlogPost({ data, pageContext, location }) {
   const { previousPost, nextPost } = pageContext
-
   const post = data.markdownRemark
+  const image = post.frontmatter.image
+    ? post.frontmatter.image.childImageSharp.resize
+    : null
+
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        image={image}
+        pathname={location.pathname}
       />
       <main
         css={css`

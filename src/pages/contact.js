@@ -3,10 +3,14 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { css } from "@emotion/core"
 
-export default function Contact() {
+export default function Contact({ location }) {
   return (
     <Layout>
-      <SEO title="Contact Me" description="Arnaud Valensi's contact details" />
+      <SEO
+        title="Contact Me"
+        description="Arnaud Valensi's contact details"
+        pathname={location.pathname}
+      />
       <main
         css={css`
           text-align: center;
