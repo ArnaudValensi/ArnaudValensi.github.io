@@ -6,7 +6,9 @@ title: About Me
 
 🧙📜 I'm looking for a freelance mission.
 
-I'm a software engineer specialized in video game development, game design and full-stack development. Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
+I'm a software engineer specialized in full-stack development, game design, and video game development, who can build apps and video games from the ground up. I've worked mostly at startups, so I'm used to wearing many hats. I am a very product focussed developer who prioritizes user feedback first and foremost. I'm generally very flexible when investigating new roles.
+
+Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
 
 I would preferably work in the game industry, but not necessarily, and if it is I would preferably work on a video game, but not necessarily.
 
