@@ -136,7 +136,11 @@ export default function Layout({ children }) {
             }
           `}
         >
-          <ClientOnly>
+          <ClientOnly
+            css={css`
+              height: 24px;
+            `}
+          >
             <DarkModeToggler />
           </ClientOnly>
         </div>

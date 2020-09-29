@@ -8,7 +8,7 @@ export default function ClientOnly({ children, ...delegated }) {
   }, [])
 
   if (!hasMounted) {
-    return null
+    return <div {...delegated}></div>
   }
 
   return <div {...delegated}>{children}</div>
