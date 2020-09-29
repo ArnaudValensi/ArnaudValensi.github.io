@@ -42,8 +42,9 @@ My favorite game design elements are those around intrinsic motivation, emergent
 
 In games like Minecraft, Don’t Starve, Stardew Valley, you don’t necessarily have clear goals, you have to find your own. I find this motivation powerful and like the sensation of freedom.
 
-In games like Hitman or Breath Of The Wild, you do have clear goals but you have a variety of ways to achieve it. This triggers the problem-solving part of the brain in a very creative way.
-With procedurally generated worlds like in Minecraft, even the developers of the game can be amazed and spend hours going in adventure to discovers their own creations.
+In games like Hitman or Breath Of The Wild, you do have clear goals but you have a variety of ways to achieve it. This triggers the problem-solving part of the brain in a very creative forms.
+
+With procedurally generated worlds like in Minecraft, even the developers of the game can be amazed and spend hours going in adventure to discover their own creations.
 
 Finally, I enjoy sharing these experiences with my friends or find new ones, this is why I tend to focus on building networked games.
 
@@ -151,7 +152,7 @@ Source: [LinkedIn](https://www.linkedin.com/in/arnaud-valensi-04080084/)
 
 ## Latest Novel Readings
 
-- [The Outside by Stephen King](https://www.goodreads.com/book/show/36124936-the-outsider?ac=1&from_search=true&qid=oLJvuiOxJ7&rank=4)
+- [The Outsider by Stephen King](https://www.goodreads.com/book/show/36124936-the-outsider?ac=1&from_search=true&qid=oLJvuiOxJ7&rank=4)
 - [The Institute by Stephen King](https://www.goodreads.com/book/show/43798285-the-institute?ac=1&from_search=true&qid=GGGJjFqUgN&rank=1)
 - [Le Signal by Maxime Chattam](https://www.goodreads.com/book/show/42548217-le-signal?ac=1&from_search=true&qid=Xpq0su5Dj8&rank=1)
 - [Autre-Monde by Maxime Chattam](https://www.goodreads.com/book/show/5505135-l-alliance-des-trois?ac=1&from_search=true&qid=hbhGlCr5l4&rank=1)
