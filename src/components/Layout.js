@@ -33,7 +33,7 @@ const MenuLink = props => (
         margin-top: ${rhythm(1)};
       }
 
-      @media (min-width: 576px) {
+      @media (min-width: 650px) {
         & + & {
           margin-top: 0;
           margin-left: ${rhythm(1)};
@@ -75,7 +75,7 @@ export default function Layout({ children }) {
             align-items: center;
             margin-bottom: ${rhythm(2)};
 
-            @media (min-width: 576px) {
+            @media (min-width: 650px) {
               flex-direction: row;
               margin-bottom: ${rhythm(1 / 2)};
             }
@@ -88,7 +88,7 @@ export default function Layout({ children }) {
               margin-bottom: ${rhythm(2)};
               text-align: center;
 
-              @media (min-width: 576px) {
+              @media (min-width: 650px) {
                 width: unset;
                 margin-bottom: 0;
                 text-align: unset;
@@ -113,7 +113,7 @@ export default function Layout({ children }) {
               margin-left: 0;
               align-items: center;
 
-              @media (min-width: 576px) {
+              @media (min-width: 650px) {
                 margin-left: auto;
                 flex-direction: row;
               }
@@ -121,6 +121,9 @@ export default function Layout({ children }) {
           >
             <MenuLink to="/">About Me</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
+            <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
+              Resume
+            </MenuLink>
             <MenuLink to="/contact/">Contact Me</MenuLink>
           </nav>
         </div>
@@ -131,7 +134,7 @@ export default function Layout({ children }) {
             margin-bottom: ${rhythm(3)};
             justify-content: center;
 
-            @media (min-width: 576px) {
+            @media (min-width: 650px) {
               justify-content: unset;
             }
           `}
