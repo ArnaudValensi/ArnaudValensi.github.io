@@ -124,7 +124,7 @@ export default function Layout({ children }) {
             <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
               Resume
             </MenuLink>
-            <MenuLink to="/contact/">Contact Me</MenuLink>
+            <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
         <div

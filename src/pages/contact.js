@@ -7,8 +7,8 @@ export default function Contact({ location }) {
   return (
     <Layout>
       <SEO
-        title="Contact Me"
-        description="Arnaud Valensi's contact details"
+        title="Social information"
+        description="Arnaud Valensi's social networks details"
         pathname={location.pathname}
       />
       <main
@@ -23,6 +23,15 @@ export default function Contact({ location }) {
             rel="noreferrer"
           >
             Email
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://github.com/ArnaudValensi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
           </a>
         </p>
         <p>
