@@ -18,7 +18,7 @@ I have always lived with video games. When teachers asked us what we wanted to d
 
 Today I don’t play much video games because when I do, it quickly gives me ideas that I look forward to implementing in my own projects. And I feel that programming itself is like the best video game ever.
 
-In fact, my desire for building things is not tied to video games, I like to make things in general, which is why I’m not only specialized in video games. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or tell people what to do.
+In fact, my desire for crafting things is not tied to video games, I like to build things in general, which is why I’m not only specialized in video games. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or tell people what to do.
 
 ## Career
 
