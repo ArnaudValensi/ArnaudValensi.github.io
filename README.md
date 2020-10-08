@@ -4,6 +4,8 @@ My personal blog. Powered by [GatsbyJS](https://www.gatsbyjs.com/) and [Notion](
 
 This blog uses content from notes made in [notion.so](https://www.notion.so/) and automatically deploys on github pages.
 
+You can read my blog post about this, [here](https://arnaudvalensi.github.io/blog/making-a-blog-using-notion-gatsby-and-github-pages/)
+
 ## To run locally
 
 Copy the file `.env.example` to `.env` and fill the `NOTION_TOKEN` and `NOTION_ROOT_PAGE_ID` variable.
@@ -39,3 +41,9 @@ The github action is configured to import the blog posts and rebuild the blog ei
 - every day at midnight UTC
 - each time you push on master
 - if you manually trigger the action on github
+
+## Posts
+
+To make the system work, you have to fill the following elements on your blog posts:
+![exampel](https://user-images.githubusercontent.com/604486/95316471-24c4ee80-0894-11eb-8399-f99701b801da.png)
+
