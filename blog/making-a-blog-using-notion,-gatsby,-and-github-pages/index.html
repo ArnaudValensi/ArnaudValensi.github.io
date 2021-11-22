@@ -89,15 +89,15 @@ void function() {
 <p>To get the page id of your root page it's easy. If the link is <code class="language-text">https://www.notion.so/Blog-83f4047341534d6bb846b1f561a13173</code>, the id is <code class="language-text">83f4047341534d6bb846b1f561a13173</code>.</p>
 <p>The script will download any image URL. It will also convert any text line starting by <code class="language-text">==</code> to a markdown frontmatter metadata.</p>
 <p>Let's say you have this in your Notion note:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">== date: 2020-09-17
+<div class="gatsby-highlight" data-language="plaintext"><pre class="language-plaintext"><code class="language-plaintext">== date: 2020-09-17
 == description: How to use notion as a content manager to generate a static blog.</code></pre></div>
 <p>In markdown it will become:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">---
+<div class="gatsby-highlight" data-language="plaintext"><pre class="language-plaintext"><code class="language-plaintext">---
 date: 2020-09-17
 description: How to use Notion as a content manager to generate a static blog.
 ---</code></pre></div>
 <p>The cover image of the page will also be downloaded and the path will be added in the fronttmater:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">---
+<div class="gatsby-highlight" data-language="plaintext"><pre class="language-plaintext"><code class="language-plaintext">---
 ...
 featured: &#39;0ca01e654f193b6555f25ba69613ee1ad67d8e71.jpeg&#39;
 ---</code></pre></div>
@@ -106,50 +106,50 @@ featured: &#39;0ca01e654f193b6555f25ba69613ee1ad67d8e71.jpeg&#39;
 <p>I want to deploy on Github pages. To do this manually, we can use the npm package <a href="gh-pages">https://www.npmjs.com/package/gh-pages</a> like this <code class="language-text">gh-pages -d public</code>. This is nice, but I prefer to automate this part.</p>
 <p>I use a "workflow" made with <a href="Github%20Actions">https://github.com/features/actions</a>.
 I create a <code class="language-text">deploy.yml</code> file in the <code class="language-text">.github/workflows</code> directory of my repository:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">name: Build and Deploy
-on:
-  schedule:
-    - cron: &quot;0 0 * * *&quot; # Every day at midnight.
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span> <span class="token comment"># Every day at midnight.</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build-and-deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python 3.8
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.8</span>
 
-      - name: Set up pipenv
-        uses: dschep/install-pipenv-action@v1
-        with:
-          version: 2020.8.13
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up pipenv
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> dschep/install<span class="token punctuation">-</span>pipenv<span class="token punctuation">-</span>action@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">version</span><span class="token punctuation">:</span> 2020.8.13
 
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.2
-        with:
-          persist-credentials: false
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout 🛎️
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2.3.2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">persist-credentials</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
 
-      - name: Install and Build 🔧
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
-        run: |
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install and Build 🔧
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">NOTION_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.NOTION_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">NOTION_ROOT_PAGE_ID</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.NOTION_ROOT_PAGE_ID <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
           pipenv install
           pipenv run python ./bin/get-blog-posts.py
           yarn install
-          yarn build
+          yarn build</span>
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.5.9
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public
-          CLEAN: true</code></pre></div>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy 🚀
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> JamesIves/github<span class="token punctuation">-</span>pages<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>action@3.5.9
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">GITHUB_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">BRANCH</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages
+          <span class="token key atrule">FOLDER</span><span class="token punctuation">:</span> public
+          <span class="token key atrule">CLEAN</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre></div>
 <p>In the <code class="language-text">on:</code> section:</p>
 <ul>
 <li><code class="language-text">schedule</code> tells to run this on a specific interval, here every day at midnight UTC.</li>
