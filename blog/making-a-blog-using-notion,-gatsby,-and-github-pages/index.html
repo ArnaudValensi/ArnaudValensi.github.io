@@ -65,6 +65,7 @@ void function() {
       />
   </a>
     </span></p>
+<p>Note: </p>
 <p>Lately, I decided to create this static blog using the great GatsbyJs. Of course, a question quickly arose: what data source am I going to use to populate it?</p>
 <p>I really like Notion, I use it for note-taking, internal business documentation and I'll probably be using it to write my blog posts, so why not use it directly as a content manager?</p>
 <p>After searching the web for this idea, I came across a blog post by Tony Faieta:</p>
@@ -81,11 +82,11 @@ void function() {
 <li>I would like my blog to regenerate a static website each time:</li>
 </ul>
 <h2>Importing Notes From Notion</h2>
-<p>To get the data from Notion, the most flexible tool I found is the <a href="notion-py">https://github.com/jamalex/notion-py</a> python library. It allows getting notion note modelized as an array of blocks, each block being a text line, a title, an image, a list item, etc.</p>
-<p>I found markdown to be the best format to import Notion notes because the Gatsby plugin <a href="gatsby-transformer-remark">https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/</a> handles it very well and have itself a plugin to display all kinds of videos. Also, using markdown allows me to backup the posts easily.</p>
-<p>After a bit of hacking, I've made the following script: <a href="get-blog-posts.py">https://github.com/ArnaudValensi/ArnaudValensi.github.io/blob/master/bin/get-blog-posts.py</a></p>
+<p>To get the data from Notion, the most flexible tool I found is the <a href="https://github.com/jamalex/notion-py" target="_blank" rel="nofollow noopener noreferrer">notion-py</a> python library. It allows getting notion note modelized as an array of blocks, each block being a text line, a title, an image, a list item, etc.</p>
+<p>I found markdown to be the best format to import Notion notes because the Gatsby plugin <a href="https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/" target="_blank" rel="nofollow noopener noreferrer">gatsby-transformer-remark</a> handles it very well and have itself a plugin to display all kinds of videos. Also, using markdown allows me to backup the posts easily.</p>
+<p>After a bit of hacking, I've made the following script: <a href="https://github.com/ArnaudValensi/ArnaudValensi.github.io/blob/master/bin/get-blog-posts.py" target="_blank" rel="nofollow noopener noreferrer">get-blog-posts.py</a></p>
 <p>It uses two environment variables, <code class="language-text">NOTION_TOKEN</code> and <code class="language-text">NOTION_ROOT_PAGE_ID</code> which are respectively your notion token and the root page id.</p>
-<p>The notion token allows the library to access the private notes of your notion account, <a href="here">https://www.redgregory.com/notion/2020/6/15/9zuzav95gwzwewdu1dspweqbv481s5</a> are the instructions to find it.</p>
+<p>The notion token allows the library to access the private notes of your notion account, <a href="https://www.redgregory.com/notion/2020/6/15/9zuzav95gwzwewdu1dspweqbv481s5" target="_blank" rel="nofollow noopener noreferrer">here</a> are the instructions to find it.</p>
 <p>To get the page id of your root page it's easy. If the link is <code class="language-text">https://www.notion.so/Blog-83f4047341534d6bb846b1f561a13173</code>, the id is <code class="language-text">83f4047341534d6bb846b1f561a13173</code>.</p>
 <p>The script will download any image URL. It will also convert any text line starting by <code class="language-text">==</code> to a markdown frontmatter metadata.</p>
 <p>Let's say you have this in your Notion note:</p>
@@ -103,8 +104,8 @@ featured: &#39;0ca01e654f193b6555f25ba69613ee1ad67d8e71.jpeg&#39;
 ---</code></pre></div>
 <p>The script stores the imported blog posts in the <code class="language-text">content/blog/</code> directory. Then I tell the Gatsby remark plugin to generate the pages using the markdown files. At this point, the blog is running.</p>
 <h2>Continuous Deployment</h2>
-<p>I want to deploy on Github pages. To do this manually, we can use the npm package <a href="gh-pages">https://www.npmjs.com/package/gh-pages</a> like this <code class="language-text">gh-pages -d public</code>. This is nice, but I prefer to automate this part.</p>
-<p>I use a "workflow" made with <a href="Github%20Actions">https://github.com/features/actions</a>.
+<p>I want to deploy on Github pages. To do this manually, we can use the npm package <a href="https://www.npmjs.com/package/gh-pages" target="_blank" rel="nofollow noopener noreferrer">gh-pages</a> like this <code class="language-text">gh-pages -d public</code>. This is nice, but I prefer to automate this part.</p>
+<p>I use a "workflow" made with <a href="https://github.com/features/actions" target="_blank" rel="nofollow noopener noreferrer">Github Actions</a>.
 I create a <code class="language-text">deploy.yml</code> file in the <code class="language-text">.github/workflows</code> directory of my repository:</p>
 <div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy
 <span class="token key atrule">on</span><span class="token punctuation">:</span>
