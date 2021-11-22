@@ -10,16 +10,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-
-      - name: Set up pipenv
-        uses: dschep/install-pipenv-action@v1
-        with:
-          version: 2020.8.13
-
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
@@ -30,9 +20,8 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
         run: |
-          pipenv install
-          pipenv run python ./bin/get-blog-posts.py
           yarn install
+          yarn import-notion-posts
           yarn build
 
       - name: Deploy 🚀
