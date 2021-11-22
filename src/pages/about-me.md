@@ -4,17 +4,13 @@ title: About Me
 
 # About Me
 
-🧙📜 I'm looking for a freelance mission.
-
-I'm a software engineer specialized in full-stack development, game design, and video game development, who can build apps and video games from the ground up. I've worked mostly at startups, so I'm used to wearing many hats. I am a very product focussed developer who prioritizes user feedback first and foremost. I'm generally very flexible when investigating new roles.
+I'm a software engineer specialized in full-stack development, game design, and video game development, who can build apps and video games from the ground up. I've worked at startups as well as CAC40 companies, so I'm used to wearing many hats. I am a very product focussed developer who prioritizes user feedback first and foremost. I'm generally very flexible when investigating new roles.
 
 Lately, I've been building a business to make real-time networked video games, but I'm still doing full-stack development for a living.
 
 I started coding in 2001 at the age of 13. I was mainly doing web development at the time. I started studying programming in school in 2009 where I gained broader skills like system, network and AI programming using c, c++, java. I became a graduate software engineer in 2014.
 
-I have always lived with video games. When teachers asked us what we wanted to do with our lives, at the age where the answers were astronaut, firefighter or princess, mine was being a video game maker.
-
-Today I don’t play much because when I do, it quickly gives me ideas that I look forward to implement in my own projects. And I feel that programming itself is like the best game ever.
+I have always lived with video games. When teachers asked us what we wanted to do with our lives, at the age where the answers were astronaut, firefighter or princess, mine was being a video game maker. Today I don’t play much because when I do, it quickly gives me ideas that I look forward to implement in my own projects. And I feel that programming itself is like the best game ever.
 
 In fact, my desire for crafting things is not tied to video games, I like to build things in general, which is why I’m not only specialized in game development. During my career, I've tried to acquire all the skills to build and publish projects on my own. This is why I'm familiar with high and low-level programming languages, but I've also developed skills in marketing / growth hacking, data analysis, UI / UX, and art. Of course, I'm not as good at these as I am at software engineering, but I know enough to do some projects on my own or to manage people to do it.
 
